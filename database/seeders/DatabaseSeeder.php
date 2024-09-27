@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             EstadoSeeder::class,
             CidadeSeeder::class,
+            ClientesSeeder::class,
             RepresentanteSeeder::class,
         ]);
     }
