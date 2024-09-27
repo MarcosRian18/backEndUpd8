@@ -1,3 +1,79 @@
+# Projeto Laravel
+
+Este projeto foi desenvolvido utilizando a versão mais recente do Laravel, adotando práticas modernas de desenvolvimento, mantendo uma boa estrutura para fácil manutenção e mais limpo. 
+
+## Requisitos
+
+- PHP: 8.1 ou superior
+- Laravel: 10.x
+- Composer: 2.x
+- Banco de Dados: MySQL
+- Node.js: 16.x ou superior (para gerenciamento de assets)
+- Laravel Sail (Pacote)
+
+## Instalação
+
+Clone o repositório:
+
+```bash
+git clone https://github.com/seu-usuario/seu-projeto.git
+cd seu-projeto
+```
+
+Instale as dependências do Composer:
+
+composer install
+
+Copie o arquivo .env.example para .env e configure suas variáveis de ambiente, especialmente as relacionadas ao banco de dados:
+
+cp .env.example .env
+
+Instalar o Laravel Sail
+Caso o Laravel Sail ainda não esteja instalado, execute o comando abaixo:
+
+```bash
+php artisan sail:install
+```
+
+Subir os Containers com Docker
+Agora, inicie os containers do Docker utilizando o Sail:
+
+```bash
+./vendor/bin/sail up -d
+```
+Comando para executar as migrate e os seeders
+```bash
+./vendor/bin/sail artisan migrate --seed
+```
+##Comandos que podem ser uteis:
+```bash
+Comandos Úteis
+Aqui estão alguns comandos úteis para gerenciar o projeto com o Sail:
+
+Subir os containers: ./vendor/bin/sail up -d
+Derrubar os containers: ./vendor/bin/sail down
+Acessar o shell do container do Laravel: ./vendor/bin/sail shell
+Executar comandos Artisan: ./vendor/bin/sail artisan
+```
+Gere a chave da aplicação:
+
+php artisan key:generate
+
+Execute as migrações e os seeders:
+
+sail artisan migrate --seed
+ou 
+
+php artisan migrate --seed
+
+Instale as dependências do NPM e compile os assets:
+
+npm install
+npm run dev
+
+Inicie o servidor de desenvolvimento:
+
+./vendor/bin/sail up -d  ou php artisan serve
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
